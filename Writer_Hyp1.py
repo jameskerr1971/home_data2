@@ -28,9 +28,9 @@ now = datetime.utcnow()
 t = now.isoformat()
 
 cpu_percent_data_dict = {'Time': t, 'Metric': cpu_percent_flo}
-print('cpu_percent_data_dict ', cpu_percent_data_dict)
-cpu_percent_coll = db.hyp1_cpu
-cpu_percent_write = cpu_percent_coll.insert_one(cpu_percent_data_dict)
+#print('cpu_percent_data_dict ', cpu_percent_data_dict)
+#cpu_percent_coll = db.hyp1_cpu
+#cpu_percent_write = cpu_percent_coll.insert_one(cpu_percent_data_dict)
 
 #FREE MEMORY
 free_memory_digits = []
@@ -47,8 +47,8 @@ t = now.isoformat()
 
 free_memory_data_dict = {'Time': t, 'Metric': free_memory_int}
 print('free_memory_data_dict ', free_memory_data_dict)
-free_memory_coll = db.hyp1_free_memory
-free_memory_write = free_memory_coll.insert_one(free_memory_data_dict)
+#free_memory_coll = db.hyp1_free_memory
+#free_memory_write = free_memory_coll.insert_one(free_memory_data_dict)
 
 #DISK USED
 disk_used_digits = []
@@ -65,8 +65,8 @@ t = now.isoformat()
 
 disk_used_data_dict = {'Time': t, 'Metric': disk_used_percent}
 print('disk_used_data_dict ', disk_used_data_dict)
-disk_used_coll = db.hyp1_disk_used
-disk_used_write = disk_used_coll.insert_one(disk_used_data_dict)
+#disk_used_coll = db.hyp1_disk_used
+#disk_used_write = disk_used_coll.insert_one(disk_used_data_dict)
 
 cpu_json_body = [{"measurement": "cpu_utilisation", "tags": {"method": "device", "unit": "%", "device": "hyp1"}, "fields": {"value": cpu_percent_flo}}]
 
