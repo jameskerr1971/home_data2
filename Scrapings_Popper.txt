@@ -1,0 +1,1 @@
+b'LoadPercentage  \r\r\n46              \r\r\n\r\r\n'b'LoadPercentage  \r\r\n26              \r\r\n\r\r\n'b'LoadPercentage  \r\r\n43              \r\r\n\r\r\n'b'LoadPercentage  \r\r\n26              \r\r\n\r\r\n'
