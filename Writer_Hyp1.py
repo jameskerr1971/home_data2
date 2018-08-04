@@ -76,3 +76,7 @@ mem_json_body = [{"measurement": "free_memory", "tags": {"method": "device", "un
 
 client.write_points(mem_json_body)
 
+disk_json_body = [{"measurement": "disk_used", "tags": {"method": "device", "unit": "%", "device": "hyp1"}, "fields": {"value": disk_used_percent}}]
+
+client.write_points(disk_json_body)
+
