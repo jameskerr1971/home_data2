@@ -8,6 +8,8 @@ import pymongo
 #wait for the scraper script to run at the start of the minute
 time.sleep(10)
 
+client = InfluxDBClient(host='192.168.0.54', port=8086, database='home_data')
+
 #get the data from the scrapings file
 with open ('/home/dennett/scripting/Scrapings_Hyp1.txt', 'rt') as in_file:
     contents = in_file.read()
