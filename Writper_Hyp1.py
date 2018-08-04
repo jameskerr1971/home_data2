@@ -67,3 +67,12 @@ disk_used_data_dict = {'Time': t, 'Metric': disk_used_percent}
 print('disk_used_data_dict ', disk_used_data_dict)
 disk_used_coll = db.hyp1_disk_used
 disk_used_write = disk_used_coll.insert_one(disk_used_data_dict)
+
+cpu_json_body = [{"measurement": "cpu_utilisation", "tags": {"method": "device", "unit": "%", "device": "hyp1"}, "fields": {"value": cpu_percent_flo}}]
+
+client.write_points(cpu_json_body)
+
+mem_json_body = [{"measurement": "free_memory", "tags": {"method": "device", "unit": "MB", "device": "hyp1"}, "fields": {"value": free_memory_int}}]
+
+client.write_points(mem_json_body)
+
