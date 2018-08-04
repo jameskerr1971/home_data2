@@ -2,6 +2,7 @@ import re
 import time
 from datetime import datetime
 #from pymongo import MongoClient
+from influxdb import InfluxDBClient
 import pymongo
 
 #wait for the scraper script to run at the start of the minute
