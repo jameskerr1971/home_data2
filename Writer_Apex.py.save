@@ -1,0 +1,58 @@
+import re
+import time
+from datetime import datetime
+from influxdb import InfluxDBClient
+import json
+
+#wait for the scraper script to run at the start of the minute
+#time.sleep(40)
+
+client = InfluxDBClient(host='192.168.0.54', port=8086, database='home_data')
+
+with open ('/home/dennett/scripting2/wire_traffic_rate.json', 'rt') as json_file:
+    contents = json.load(json_file)
+    #print(contents)
+
+for data in contents['data']:
+    print(data)
+
+
+
+#    json_acceptable_string = str(contents.replace("'", "\""))
+#    print(json_acceptable_string)
+    #json_contents = json.loads(json_acceptable_string)
+
+#print(contents['data'])
+
+
+
+
+
+#print(thing1)
+
+#            dict2 = list1[0]
+#            time1 = dict2['data']['intervalData']['intervals']
+#            time_str1 = str(time1[0])
+#            time_str_list1.append(time_str1)
+
+#            list2 = dict1['data']['results']['results']
+#            dict3 = list2[0]
+#            list3 = dict3['data']['series']
+#            dict4 = list3[0]
+#            list4 = dict4['fieldData']
+#            dict3 = list2[0]
+#            list3 = dict3['data']['series']
+#            dict3 = list2[0]
+#            list3 = dict3['data']['series']
+#            dict4 = list3[0]
+#            list4 = dict4['fieldData']
+#            dict4 = list4[0]
+#            list5 = dict4['data']
+#            dict6 = list5[0]
+#            metric1 = dict6['float']
+
+#####################
+
+#wire_traffic_rate_json_body = [{"measurement": "wire traffic rate", "tags": {"method": "wire", "unit": "Bits Per Seccond", "device": "dennett"}, "fields": {"value": wire_traffic_rate}}]
+
+#client.write_points(wire_traffic_rate_json_body)
