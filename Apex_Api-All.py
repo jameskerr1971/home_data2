@@ -22,7 +22,7 @@ less_seconds_ago_iso_str = str(less_seconds_ago_iso)
 session = requests.Session()
 sessionurl = 'https://192.168.0.12/oa/api/session'
 headers = {'Content-type': 'application/json', 'Accept':'application/json'}
-sessionpayload = {'session' : {'username': 'admin', 'password': '0bserver'}}
+sessionpayload = {'session' : {'username': 'username', 'password': 'password'}}
 sessionpost = session.post(sessionurl, headers=headers, data=json.dumps(sessionpayload), verify=False)
 
 #WIRE TRAFFIC RATE
